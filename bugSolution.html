@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Correct way to check for the existence of an element and its attribute
+    const myDiv = document.getElementById("myDiv");
+    if (myDiv) {
+        // Check if the attribute exists before accessing it
+      if (myDiv.hasAttribute("data-myAttribute")){
+        let myVar = myDiv.getAttribute("data-myAttribute");
+        console.log(myVar);
+      } else {
+        console.log("Attribute does not exist");
+      }
+    } else {
+      console.log("Element not found");
+    }
+
+    // Using a valid ID name
+    const myElement = document.getElementById("myValidId");
+    
+  </script>
+</body>
+</html>
