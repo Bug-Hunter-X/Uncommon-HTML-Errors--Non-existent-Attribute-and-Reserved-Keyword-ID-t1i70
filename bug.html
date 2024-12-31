@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Attempting to access a non-existent attribute
+    let myVar = document.getElementById("myDiv").nonExistentAttribute;
+    console.log(myVar); // This will produce an error: Uncaught TypeError: Cannot read properties of null (reading 'nonExistentAttribute')
+
+    //Another uncommon error: Using a reserved keyword as an id
+    document.getElementById("for");
+  </script>
+</body>
+</html>
